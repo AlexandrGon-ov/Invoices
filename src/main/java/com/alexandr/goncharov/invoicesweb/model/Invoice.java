@@ -9,9 +9,9 @@ import javax.persistence.*;
 public class Invoice {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="invoice_id")
-    private int invoiceId;
+    private long invoiceId;
 
     @Column(name="customer_name")
     private String customerName;
@@ -22,11 +22,11 @@ public class Invoice {
     @Column(name="amount")
     private Double amount;
 
-    public int getInvoiceId() {
+    public long getInvoiceId() {
         return invoiceId;
     }
 
-    public void setInvoiceId(int invoiceId) {
+    public void setInvoiceId(long invoiceId) {
         this.invoiceId = invoiceId;
     }
 
